@@ -1,0 +1,20 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-header bar-positive">
+		<h1 class="title">Item</h1>
+		<button class="button button-clear button-primary" ng-click="cancel()">Cancel</button>
+	</ion-header-bar>
+	<ion-content class="padding">
+		<div class="list">
+			<label class="item item-input">
+				<input type="text" placeholder="Day" ng-model="data.day">
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Open at" ng-model="data.openAt">
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Close at" ng-model="data.closeAt">
+			</label>
+			<button class="button button-full button-positive" ng-click="save()">Save</button>
+		</div>
+	</ion-content>
+</ion-modal-view>
