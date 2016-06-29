@@ -23,6 +23,8 @@
 
 		function loadProducts() {
 			productsService.getItems(businessId).then(function(data) {
+				console.log("numero prodotti caricatti =>");
+				console.log(data.length);
 				vm.products = data;
 			});
 		}

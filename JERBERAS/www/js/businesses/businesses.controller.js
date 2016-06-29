@@ -62,6 +62,8 @@
 		function loadBusinesses() {
 			businessesService.getBusinessesByCategory(vm.selectedCategory)
 				.then(function(businesses) {
+					console.log("elenco bisiness");
+					console.log(businesses);
 					vm.businesses = businesses;
 					return businesses
 				})

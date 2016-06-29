@@ -8,12 +8,13 @@ angular.module('itinnovdesign', [
 	'ionic.service.core',
 	'ionic.service.push',
 	'ngCordova',
-
+    'LocalStorageModule',
 	'firebase',
 	'config',
 	'gMaps',
 	'ionic.rating',
-
+     'itinnovdesign.shop-cart',
+	'itinnovdesign.shop-delivery',
 	'itinnovdesign.products',
 	'itinnovdesign.news',
 	'itinnovdesign.map',
