@@ -6,15 +6,16 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/components-font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="css/components-font-awesome/css/font-awesome.css">
     <link href="css/main.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-     <script src="lib/conversion.js/conversion.js"></script>
+     <script src="lib/Conversion.js/conversion.js"></script>
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
 	
 	    <script src="lib/angular-websocket/dist/angular-websocket.min.js"></script>
 		<script src="lib/ngCordova/dist/ng-cordova.js"></script>
@@ -23,16 +24,19 @@
 		<script src="lib/ionic-service-core/ionic-core.js"></script>
 		<script src="lib/ionic-service-push/ionic-push.js"></script>
 		<script src="lib/date.format/date.format.js"></script>
-		<script src="lib/geolib/dist/geolib.js"></script>
+		<script src="lib/Geolib/dist/geolib.js"></script>
 		<script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
 		<script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
 		<script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
 		<script src="lib/firebase/firebase.js"></script>
 		<script src="lib/angularfire/dist/angularfire.js"></script>
 		<script src="lib/ionic-rating/ionic-rating.js"></script>
+	<script src="lib/moment/moment.js"></script>
+	<script src="lib/angular-moment/angular-moment.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+<!-- <script src="cordova.js"></script> -->
 
     <!-- your app's js -->
     <script src="js/app.js"></script>

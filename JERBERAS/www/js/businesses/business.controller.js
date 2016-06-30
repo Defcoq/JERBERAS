@@ -37,6 +37,8 @@
 		});
 
 		(function activate() {
+			console.log("c'è questo cazzo di contain openhours?????=>");
+			console.log(vm.business.containsOpenHours);
 			setDistanceToOrigin();
 		})();
 

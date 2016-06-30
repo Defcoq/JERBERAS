@@ -31,7 +31,7 @@
 			productsService.getItem(businessId, productId)
 				.then(function(product) {
 					vm.product = product;
-					vm.selectedPrice = product.price[0];
+					vm.selectedPrice = product.price;
 					console.log(product.pictures[0]);
 				});
 		}
@@ -54,9 +54,9 @@
 			shopCartService.addToCart({
 				quantity: quantity,
 				name: vm.product.name,
-				price: vm.selectedPrice.value,
-				currency: vm.selectedPrice.currency,
-				size: vm.selectedPrice.name,
+				price: vm.selectedPrice,
+				//currency: vm.selectedPrice.currency,
+				//size: vm.selectedPrice.name,
 				picture: vm.product.pictures[0],
 				description: vm.product.description,
 				options: getSelectedOptions(vm.product.standardOptions).concat(getSelectedOptions(vm.product.extraOptions)),

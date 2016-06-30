@@ -47,7 +47,8 @@
 			var total = 0;
 			_.each(vm.items, function(item) {
 				total += getItemTotal(item);
-				vm.currency = item.currency;
+				//vm.currency = item.currency;
+				vm.currency = "CFA";
 			});
 			vm.total = total;
 		}

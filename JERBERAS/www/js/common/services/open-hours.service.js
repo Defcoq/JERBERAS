@@ -44,25 +44,43 @@
 		}
 
 		function isBusinessOpen(openHours) {
+			console.log("business open hours =>");
+			console.log(openHours);
 			var now = (new Date());
 			var day = now.getDay();
+			console.log(day);
 			var hours = now.getHours();
 			var minutes = now.getMinutes();
 
-			var fixedTime = (new Date(2015, 0, 1, hours, minutes, 0)).getTime();
+			var fixedTime = (new Date(2016, 0, 1, hours, minutes, 0)).getTime();
+			console.log(fixedTime);
 
 			var open;
 			for (var i = 0; i < openHours.days.length; i++) {
 				open = openHours.days[i];
-				if (open.day !== day) {
+				console.log(open.day);
+				console.log(day);
+				if (parseInt(open.day) !== parseInt(day)) {
+					
 					continue;
 				}
-
-				if (fixedTime >= open.openAt && fixedTime <= open.closeAt) {
+				else
+				{
+					
+					console.log("qui ho trovato almeno un date =>");
+					console.log(open);
+				}
+                 console.log("data trovato =>");
+				 console.log(open);
+				 var openDaytimeAt = (new Date(2016, 0, 1, parseInt(open.openAt.substr(0, 2)), parseInt(open.openAt.substr(open.openAt.length-2, 2)), 0)).getTime();
+				 var openDaytimeClosetAt = (new Date(2016, 0, 1, parseInt(open.closeAt.substr(0, 2)), parseInt(open.closeAt.substr(open.closeAt.length-2, 2)), 0)).getTime();
+				 console.log(openDaytimeAt);
+				 console.log(openDaytimeClosetAt);
+				if (parseInt(fixedTime) >= parseInt(openDaytimeAt) && parseInt(fixedTime) <= parseInt(openDaytimeClosetAt)) {
 					return true;
 				}
 			}
-
+             console.log("siamo qui =>");
 			return false;
 		}
 	}
